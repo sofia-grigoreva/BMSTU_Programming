@@ -1,0 +1,248 @@
+@media screen and (min-width: 1160px) {
+  #toolsBtn {
+    display: none;
+  }
+  
+  .tools {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 5px;
+    position: static;
+    padding: 0px;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  #toolsBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .tools {
+    display: none;
+    margin-top: 50px;
+    position: fixed;
+    padding: 10px;
+    border: 1px solid #5079bf;
+  }
+}
+
+.tool {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.4em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 25px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #c0ddff;
+  font-family:
+    Didot,
+    Didot LT STD,
+    Hoefler Text,
+    Garamond,
+    Times New Roman,
+    serif;
+}
+
+.tools {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 5px;
+  background-color: #c0ddff;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  left: 10px;
+  top: 76px;
+}
+
+.t-raw1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+}
+
+.t-raw2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+}
+
+.tool h4{
+  font-size: 20px;
+  color:#5883cc;
+  font-weight: 550;
+}
+
+#toolsBtn {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  top: 65px;
+  left: 20px;
+  padding: 0.5em;
+  width: 130px;
+  justify-content: center;
+  height: 35px;
+  background-color: transparent;
+  background-size: 100% 100%;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+}
+
+#eraserBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/eraser.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#eraserBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#sprayBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/spray.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#sprayBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#penBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/pen.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#penBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#fillBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/paint-bucket.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#fillBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#pipetteBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/pipette.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#pipetteBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#allocationBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/allocation.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#allocationBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+
+#pasteImageBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/photo.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#pasteImageBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#pasteTextBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/font.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#pasteTextBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}

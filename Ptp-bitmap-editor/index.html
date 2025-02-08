@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>risovalka</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="TextModal" class="TextModal">
+      <div class="modal-contentTwo">
+        <span class="close-button">&times;</span>
+        <label for="modalText">Введите текст:</label>
+        <textarea id="modalText"></textarea>
+        <label for="fontTwo">Выбрать шрифт:</label>
+        <input type="number" min="0" id="fontTwo" value="140" />
+        <button id="saveModal">Сохранить</button>
+      </div>
+    </div>
+
+    <div id="CoefficientModal" class="CoefficientModal">
+      <div class="modal-contentFour">
+        <span class="close-buttonThree">&times;</span>
+        <input type="number" id="coefficient" min="0" max="1000" step="0.01" value="1" />
+        <button id="saveCoefficientModal">Сохранить коэффициент</button>
+      </div>
+    </div>
+
+    <div id="welcomeModal" class="modal">
+      <div class="modal-content">
+        <h2 class="inline-heading">Добро пожаловать в</h2>
+        <h1 class="inline-heading">Risovalka</h1>
+        <h2 class="inline-heading">!</h2>
+        <p>Нажмите на стрелку, чтобы начать творить</p>
+        <button id="openSizeModal"></button>
+      </div>
+    </div>
+
+    <div id="sizeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Укажите размеры холста</h3>
+        <form id="canvasSizeForm">
+          <div class="parameters">
+            <label class="inline-heading" for="width">Ширина:</label>
+            <input type="number" id="width" name="width" value="800" min="100" max="1920" required />
+            <label class="inline-heading" for="height">Высота:</label>
+            <input type="number" id="height" name="height" value="600" min="100" max="1080" required />
+          </div>
+          <button type="submit" class="upload">Готово</button>
+          <h3>или вставьте изображение с устройства</h3>
+          <input type="file" id="uploadImage" accept="image/*" />
+        </form>
+      </div>
+    </div>
+    
+    <form id="saveOptions" style="display: none" class="TextModal">
+      <div class="modal-contentTwo">
+        <label for="filename">Имя файла:</label>
+        <input type="text" id="filename" placeholder="Введите имя файла" />
+
+        <label for="format">Формат:</label>
+        <select id="format">
+          <option value="image/png">PNG</option>
+          <option value="image/jpeg">JPEG</option>
+          <option value="image/webp">WEBP</option>
+        </select>
+
+        <button id="save" type="button" onclick="applySaveOptions()">Сохранить</button>
+        <button id="back" type="button" onclick="cancelSaveOptions()">Отмена</button>
+      </div>
+    </form>
+
+    <div class="firstline">
+      <div class="buttons">
+        <button id="saveBtn" data-tippy-content="Сохранить"></button>
+        <button id="clearBtn" data-tippy-content="Удалить всё"></button>
+        <button id="copyBtn" data-tippy-content="Копировать"></button>
+        <button id="undoBtn" data-tippy-content="Отменить"></button>
+        <button id="redoBtn" data-tippy-content="Повторить"></button>
+      </div>
+    </div>
+
+    <div class="secondline" id="secondline">
+      <div class="tool" id="tool">
+        <button id="toolsBtn">Инструменты</button>
+        <div class="tools" id="tools">
+          <div class="t-raw1">
+            <button id="penBtn" data-tippy-content="Карандаш"></button>
+            <button id="eraserBtn" data-tippy-content="Ластик"></button>
+            <button id="fillBtn" class="btn" data-tippy-content="Заливка"></button>
+            <button id="sprayBtn" class="btn" data-tippy-content="Распылитель"></button>
+          </div>
+          <div class="t-raw2">
+            <button id="pipetteBtn" class="btn" data-tippy-content="Пипетка"></button>
+            <button id="pasteImageBtn" data-tippy-content="Вставить изображение"></button>
+            <button id="pasteTextBtn" data-tippy-content="Вставить текст"></button>
+            <button id="allocationBtn" class="btn" data-tippy-content="Выделение"></button>
+          </div>
+          <h4>инструменты</h4>
+        </div>
+      </div>
+
+      <div class="style" id="style">
+        <button id="styleBtn">Стиль линии</button>
+
+        <div class="styles" id="styles">
+          <div class="stylebts" id="stylebts">
+            <div class="s-col1">
+              <h5>ширина</h5>
+              <input class="styled-slider slider-progress" type="range" id="lineWidth" min="1" max="30" value="3" />
+              <h5>прозрачность</h5>
+              <input class="styled-slider slider-progress" type="range" id="transparency" min="0" max="0.99" step="0.01" value="0" />
+            </div>
+
+            <div class="s-col2">
+              <h5>штриховые линии</h5>
+              <input type="checkbox" id="hatch" />
+              <h5>заполнять фигуры</h5>
+              <input type="checkbox" id="figfill" />
+            </div>
+          </div>
+
+          <h4>стиль линии</h4>
+        </div>
+      </div>
+
+      <div class="figure" id="figure">
+        <button id="figuresBtn">Вставка фигур</button>
+        <div class="figures" id="figures">
+          <div class="f-raw1">
+            <button id="lineBtn" data-tippy-content="Линия"></button>
+            <button id="squareBtn" data-tippy-content="Квадрат"></button>
+            <button id="rectBtn" data-tippy-content="Прямоугольник"></button>
+            <button id="circleBtn" data-tippy-content="Круг"></button>
+            <button id="trBtn" data-tippy-content="Треугольник"></button>
+            <button id="prtrBtn" data-tippy-content="Прямоугольный треугольник"></button>
+          </div>
+          <div class="f-raw2">
+            <button id="ellipseBtn" data-tippy-content="Эллипс"></button>
+            <button id="heartBtn" data-tippy-content="Сердце"></button>
+            <button id="star4Btn" data-tippy-content="Звезда 1"></button>
+            <button id="star5Btn" data-tippy-content="Звезда 2"></button>
+            <button id="star6Btn" data-tippy-content="Звезда 3"></button>
+            <button id="moonBtn" data-tippy-content="Луна"></button>
+          </div>
+          <h4>вставка фигуры</h4>
+        </div>
+      </div>
+
+      <div class="color" id="color">
+        <button id="colorsBtn">Выбор цвета</button>
+        <div class="colors" id="colors">
+          <input type="color" id="colorPicker" data-tippy-content="Палитра" value="#5883cc" />
+          <div class="color-list">
+            <ul id="colors-row1"></ul>
+            <ul id="colors-row2"></ul>
+            <h4>выбор цвета</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="zoom" data-tippy-content="Маштаб">
+      <input class="styled-slider slider-progress" type="range" class="styled-slider slider-progress" id="zoomRange" min="50" max="200" value="100" />
+      <input type="number" id="zoomValue" value="100" min="50" max="200" step="1" />
+    </div>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/colors.js"></script>
+    <script src="js/styles.js"></script>
+    <script src="js/figures.js"></script>
+    <script src="js/operations.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/zoom.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

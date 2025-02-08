@@ -1,0 +1,114 @@
+@import url(css/modals.css);
+@import url(css/colors.css);
+@import url(css/figures.css);
+@import url(css/operations.css);
+@import url(css/tools.css);
+@import url(css/styles.css);
+@import url(css/zoom.css);
+
+/*
+Colors:
+
+icons: #6BC6F0
+border: #5883cc
+background1: #d2e7ff
+toolbar: #c0ddff
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #d2e7ff;
+}
+
+@media screen and (min-width: 1160px) {
+    .secondline {
+    height: 130px;
+  }
+  canvas {
+    top: 200px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+    .secondline {
+    height: 62px;
+  }
+  canvas {
+    top: 260px;
+  }
+}
+
+canvas {
+  position: absolute;
+  left: 30px;
+  border: 2px solid #5883cc;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.firstline {
+  position: fixed;
+  top: 10px;
+  left: 5px;
+  width: 97vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.secondline {
+  position: fixed;
+  margin: 0;
+  top: 52px;
+  width: 99vw;
+  min-width: 600px;
+  background-color: #c0ddff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #5079bf;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}

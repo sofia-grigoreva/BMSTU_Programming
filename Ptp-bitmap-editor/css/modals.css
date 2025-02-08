@@ -1,0 +1,433 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(5px); 
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family:
+    Didot,
+    Didot LT STD,
+    Hoefler Text,
+    Garamond,
+    Times New Roman,
+    serif;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  max-height: 300px;
+  overflow: auto;
+  -webkit-backdrop-filter: blur(5px); 
+  backdrop-filter: blur(5px);
+}
+
+.modal-content h1 {
+  font-size: 50px;
+  color: #6bc6f0;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.modal-content h2 {
+  font-size: 40px;
+  color: Black;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.modal-content h3 {
+  font-size: 30px;
+  color: Black;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.modal-content .inline-heading {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content p {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.5;
+}
+
+#openSizeModal {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.5em 1.5em;
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  background: url(images/add.gif);
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.7em;
+  border: 1.5px solid #ffffff00;
+  margin-bottom: 1rem;
+}
+
+.modal-content label {
+  font-size: 14px;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-content input[type="number"] {
+  font-size: 14px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal-content button[type="submit"] {
+  background-color: #6bc6f0;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #155cb0;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.TextModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-contentTwo {
+  margin: 15% auto;
+  padding: 20px;
+  background-color: #c0ddff;
+  border: 2px solid #5883cc;
+  width: 30%;
+  position: relative;
+}
+
+.TextModal .modal-contentTwo .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#FontSize {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/save.png) no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  border: 1.5px solid #d2e7ff;
+}
+
+#FontSize:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+.CoefficientModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-contentFour {
+  margin: 15% auto;
+  padding: 20px;
+  width: 30%;
+  background-color: #c0ddff;
+  border: 2px solid #5883cc;
+}
+
+.close-buttonThree {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-buttonThree:hover,
+.close-buttonThree:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#saveModal {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  margin: 10px;
+}
+
+#saveCoefficientModal {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  margin: 10px;
+}
+
+#modalText{
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  margin: 10px;
+}
+
+#font{
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  margin: 10px;
+}
+
+#fontTwo{
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  margin: 10px;
+}
+
+#coefficient{
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  margin: 10px;
+}
+
+.TextModal .modal-contentTwo {
+  color: #5883cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.TextModal .modal-contentTwo label {
+  margin-bottom: 10px;
+}
+
+.TextModal .modal-contentTwo textarea,
+.TextModal .modal-contentTwo input[type="number"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.TextModal .modal-contentTwo button {
+  margin-top: 10px;
+}
+
+#save {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  margin: 15px;
+}
+
+#back {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  margin: -5px;
+}
+
+#filename {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+#format{
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  margin: -5px; 
+  margin-top: 3px;
+}
+

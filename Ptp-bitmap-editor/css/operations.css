@@ -1,0 +1,92 @@
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+}
+
+#saveBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/save.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #d2e7ff;
+}
+
+#saveBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#clearBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/clear.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #d2e7ff;
+}
+
+#clearBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#copyBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/copy.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #d2e7ff;
+}
+
+#copyBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#undoBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/undo.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #d2e7ff;
+}
+
+#undoBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#redoBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/redo.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #d2e7ff;
+}
+
+#redoBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}

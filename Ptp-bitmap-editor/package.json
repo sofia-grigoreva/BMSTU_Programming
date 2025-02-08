@@ -1,0 +1,18 @@
+{
+    "name": "risovalka",
+    "description": "our paint analogue",
+    "version": "1.0.0",
+    "main": "web.js",
+    "keywords": [
+      "nodejs",
+      "express",
+      "docker",
+      "bitmap editor"
+    ],
+    "dependencies": {
+      "express": "^4.16.4"
+    },
+    "scripts": {
+      "start": "node web.js"
+    }
+  }

@@ -1,0 +1,312 @@
+@media screen and (min-width: 1160px) {
+  #figuresBtn {
+    display: none;
+  }
+  .figures {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 5px;
+    position: static;
+    padding: 0px;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  #figuresBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .figures {
+    display: none;
+    margin-top: 50px;
+    position: fixed;
+    padding: 10px;
+    border: 1px solid #5079bf;
+  }
+}
+
+.figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.4em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 25px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #c0ddff;
+    font-family:
+    Didot,
+    Didot LT STD,
+    Hoefler Text,
+    Garamond,
+    Times New Roman,
+    serif;
+}
+
+.figures {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 5px;
+  background-color: #c0ddff;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  left: 10px;
+  top: 76px;
+}
+
+.figure h4{
+  font-size: 20px;
+  color:#5883cc;
+  font-weight: 550;
+}
+
+.f-raw1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+}
+
+.f-raw2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+}
+
+#figuresBtn {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  top: 65px;
+  padding: 0.5em;
+  width: 130px;
+  justify-content: center;
+  height: 35px;
+  background-color: transparent;
+  background-size: 100% 100%;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #5883cc;
+  font-weight: 700;
+  border: 1.5px solid #5883cc;
+  cursor: pointer;
+}
+
+
+#circleBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/circle.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+  cursor: pointser;
+}
+
+#circleBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#rectBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/rectangle.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#rectBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#lineBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/line.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#lineBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#trBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/triangle.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#trBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#ellipseBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/ellipse.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#ellipseBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#heartBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/heart.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#heartBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#prtrBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/prtr.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#prtrBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#squareBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/square.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#squareBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#star5Btn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/star.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#star5Btn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#star4Btn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/star4.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#star4Btn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#star6Btn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/star6.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#star6Btn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}
+
+#moonBtn {
+  padding: 0.5em 1.5em;
+  width: auto;
+  height: 35px;
+  font-size: 0.7em;
+  background-color: transparent;
+  background: url(images/moon.png) no-repeat;
+  background-size: 100% 100%;
+  border: 1.5px solid #c0ddff;
+}
+
+#moonBtn:hover {
+  cursor: pointer;
+  border: 1.5px solid #5883cc;
+}

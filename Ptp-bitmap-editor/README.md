@@ -4,6 +4,6 @@
 
 # Список участников
 
-1. Григорьева Софья
-2. Лиганкина Анна
-3. Гвоздева Вероника
+1. [Григорьева Софья](https://gitflic.ru/user/kitri)
+2. [Лиганкина Анна](https://gitflic.ru/user/darias)
+3. [Гвоздева Вероника](https://gitflic.ru/user/grawind)

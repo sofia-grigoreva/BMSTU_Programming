@@ -1,0 +1,191 @@
+;Алгоритмическая сложность O(n)
+(define (my-range a b d)
+  (if (>= a b)
+      (list)
+      (cons a (my-range (+ a d) b d)))) 
+
+;Алгоритмическая сложность O(n·d), d — глубина вложенности списков
+(define (my-flatten xs)
+  (if (null? xs)
+      (list)
+      (if (not (pair? xs)) (list xs)
+          (append (my-flatten (car xs)) (my-flatten (cdr xs)))))) 
+
+;Алгоритмическая сложность O(n)
+(define (my-element? x xs)
+  (and (not (null? xs))
+       (or (= x (car xs))(my-element? x (cdr xs)))))
+
+;Алгоритмическая сложность O(n)
+(define (my-filter pred? xs)
+  (if (null? xs)
+      (list)
+      (if (pred? (car xs))
+          (cons (car xs) (my-filter pred? (cdr xs)))
+          (my-filter pred? (cdr xs)))))
+
+;Алгоритмическая сложность O(n^2)
+(define (my-fold-left op xs)
+  (if (< (length xs) 2) 
+      (car xs)
+      (if (= (length xs) 2)
+          (op (car xs) (car (cdr xs)))
+          (my-fold-left op (cons (op (car xs) (car (cdr xs)))
+                                 (cddr xs))))))
+
+
+;Алгоритмическая сложность O(n)
+(define (my-fold-right op xs)
+  (if (null? (cdr xs))
+      (car xs)
+      (op (car xs) (my-fold-right op (cdr xs)))))
+
+(define (kolvo x xs t)
+  (if (null? xs)
+      t
+      (if (= x (car xs))
+          (kolvo x (cdr xs) (+ 1 t))
+          (kolvo x (cdr xs) t))))
+
+(define (element x xs t)
+  (and (not (>= t 2))
+      (or (null? xs)
+          (if (= x (car xs))
+              (element x (cdr xs) (+ 1 t))
+              (element x (cdr xs) t)))))
+
+(define (nalichie x xs)
+  (and (not (null? xs))
+       (or (equal? x (car xs))
+           (nalichie x (cdr xs)))))
+(nalichie 3 '(1 2 3))
+
+;Алгоритмическая сложность O(n^2)
+(define (list->set xs)
+  (if (null? xs)
+      (list)
+      (if (> (kolvo (car xs) xs 0) 1)
+          (list->set (cdr xs))
+          (cons (car xs) (list->set (cdr xs))))))
+
+;Алгоритмическая сложность O(n^2)
+(define (set? xs)
+  (or (null? xs)
+      (and (element (car xs) xs 0)
+           (set? (cdr xs)))))
+
+
+;Алгоритмическая сложность O((len xs + len ys)²)
+(define (union xs ys)
+  (list->set (append xs ys)))
+
+;Алгоритмическая сложность O(len xs * len ys)
+(define (intersection xs ys)
+  (if (null? xs)
+      (list)
+      (if (nalichie (car xs) ys)
+          (cons (car xs) (intersection (cdr xs) ys))
+          (intersection (cdr xs) ys))))
+
+;Алгоритмическая сложность O(len xs * len ys)
+(define (difference xs ys)
+  (if (null? xs)
+      (list)
+      (if (not(nalichie (car xs) ys))
+          (cons (car xs) (difference (cdr xs) ys))
+          (difference (cdr xs) ys))))
+
+;Алгоритмическая сложность O(len xs * len ys)
+(define (symmetric-difference xs ys)
+  (difference (union xs ys) (intersection xs ys)))
+
+;Алгоритмическая сложность O(len xs * len ys)
+(define (set-eq? xs ys)
+  (define (loop x y)
+    (or (null? x)
+        (and (nalichie (car x) y)
+             (loop (cdr x) y))))
+    (and (loop xs ys) (loop ys xs))
+      )
+
+;Алгоритмическая сложность O(n^2)
+(define (string-trim-left s)
+  (if (char-whitespace? (string-ref s 0))
+      (string-trim-left (substring s 1 (string-length s)))
+      s))
+
+;Алгоритмическая сложность O(n^2)
+(define (string-trim-right s)
+  (if (char-whitespace? (string-ref s (- (string-length s) 1)))
+      (string-trim-right (substring s 0 (- (string-length s) 1)))
+      s))
+
+;Алгоритмическая сложность O(n^2)
+(define (string-trim s)
+  (string-trim-right (string-trim-left s)))
+
+;Алгоритмическая сложность O(n^2), n - минимальная из длин a, b
+(define (string-prefix? a b)
+  (or (and (equal? a "") (equal? b ""))
+      (and (not (equal? b ""))
+           (or (equal? a "")
+               (and (equal? (string-ref a 0) (string-ref b 0))
+                    (string-prefix? (substring a 1 (string-length a))
+                                    (substring b 1 (string-length b))))))))
+
+;Алгоритмическая сложность O(n^2), n - минимальная из длин a, b
+(define (string-suffix? a b)
+  (or (and (equal? a "") (equal? b ""))
+      (and (not (equal? b ""))
+           (or (equal? a "")
+               (and (equal? (string-ref a (- (string-length a) 1))
+                            (string-ref b (- (string-length b) 1)))
+                    (string-suffix?
+                     (substring a 0 ( - (string-length a) 1))
+                     (substring b 0 (- (string-length b) 1))))))))
+
+;Алгоритмическая сложность O(n^3)
+(define (string-infix? a b)
+  (or (and (equal? a "") (equal? b ""))
+      (and (not (equal? b ""))
+           (or (equal? a b)
+               (or (string-prefix? a b)
+                   (string-infix? a (substring b 1 (string-length b))))))))
+
+;Алгоритмическая сложность O(n^2 * m) (m - длина разделителя)
+(define (string-split str sep)
+  (if (> (string-length sep) (string-length str))
+      (if (equal? str "")
+          (list)
+          (list str))
+      (if (equal? (substring str 0 (string-length sep)) sep)
+          (string-split (substring str (string-length sep) (string-length str)) sep)
+          (cons (substring str 0 1)
+                (string-split (substring str 1 (string-length str)) sep)))))
+
+(define (make-multi-vector sizes . fill)
+  (if (null? fill)
+      (cons sizes (list (make-vector (apply * sizes))))
+      (cons sizes (list (make-vector (apply * sizes) (car fill))))))
+
+(define (multi-vector? m)
+  (and (list? m) (list? (car m)) (= 2 (length m))(vector? (cadr m))))
+
+(define (index sizes indices)
+  ( if (= 1 (length sizes))
+       (- (car sizes) 2)
+       (+ (* (car indices) (apply * (cdr sizes)))
+          (index (cdr sizes) (cdr indices)))))
+
+(define (multi-vector-ref m indices)
+  (vector-ref (cadr m) (index (car m) indices)))
+
+(define (multi-vector-set! m indices x)
+  (vector-set! (cadr m) (index (car m) indices) x))
+
+(define (o . xs)
+  (define (loop x xs)
+    ( if (null? xs)
+         x
+         ((car xs)(loop x (cdr xs))))) (lambda (x) (loop x xs)))
+

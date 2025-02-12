@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Table</title>
+</head>
+<body>
+    <h1>Peer 1</h1>
+    <div id="actions1"></div>
+
+    <h1>Peer 2</h1>
+    <div id="actions2"></div>
+
+    <h1>Peer 3</h1>
+    <div id="actions3"></div>
+
+    <h1>Peer 4</h1>
+    <div id="actions4"></div>
+    
+    <h1>Hash table</h1> 
+    <div id="output4"></div>
+
+    <script>
+        function setupWebSocket(socketUrl, actionsDivId, outputDivId) {
+            const aDiv = document.getElementById(actionsDivId);
+            const outputDiv = document.getElementById(outputDivId);
+            const socket = new WebSocket(socketUrl);
+
+            socket.onmessage = function(event) {
+                const data = JSON.parse(event.data); 
+
+                if (data.comment) {
+                    aDiv.innerHTML = '';
+                    data.comment.forEach(comment => {
+                        const commentDiv = document.createElement("div");
+                        commentDiv.textContent = comment;
+                        aDiv.appendChild(commentDiv);
+                    });
+                }
+                if (data.out) {
+                    outputDiv.innerHTML = '';
+                    data.out.forEach(outArray => {
+                        const outDiv = document.createElement("div");
+                        outDiv.textContent = outArray.join(", "); 
+                        outputDiv.appendChild(outDiv); 
+                    });
+                }
+            };
+        }
+
+        // setupWebSocket("ws://127.0.0.1:6062/ws", "actions1", "output4");
+        // setupWebSocket("ws://127.0.0.1:7072/ws", "actions2", "output4");
+        // setupWebSocket("ws://127.0.0.1:8082/ws", "actions3", "output4");
+        // setupWebSocket("ws://127.0.0.1:9092/ws", "actions4", "output4");
+
+        setupWebSocket("ws://185.104.251.226:6062/ws", "actions1", "output4");
+        setupWebSocket("ws://185.102.139.161:7072/ws", "actions2", "output4");
+        setupWebSocket("ws://185.102.139.168:8082/ws", "actions3", "output4");
+        setupWebSocket("ws://185.102.139.169:9092/ws", "actions4", "output4");
+
+    </script>
+</body>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: #d2e7ff;
+        color: #344e7c;
+    }
+
+    h1 {
+        color: #5883cc;
+    }
+
+    div {
+        margin: 5px 0;
+    }
+</style>
+</html>

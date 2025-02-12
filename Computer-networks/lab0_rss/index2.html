@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article from Rambler</title>
+</head>
+<body>
+    <a href="{{.Link}}"><h1>{{.Title}}</h1></a>
+    <h3>Список статей:</h3>
+    <br>
+    {{range .List}}
+        <a href="{{.Link}}">{{.Title}}</a>
+        <hr>
+    <br>
+    {{end}}
+</body>
+<style>
+    body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #d2e7ff;
+  }
+
+  h1 {
+  color: #5883cc;
+}
+
+  h3 {
+    color: #344e7c;
+  }
+  
+</style>
+</html>

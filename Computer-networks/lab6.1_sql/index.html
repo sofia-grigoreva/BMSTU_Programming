@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+</head>
+    <div id="news"></div>
+    <script>
+        const ws = new WebSocket("ws://127.0.0.1:2727/ws");
+        ws.onmessage = function(event) {
+          const newsList = JSON.parse(event.data);
+          console.log(newsList==null)
+          const newsDiv = document.getElementById("news");
+          if (newsList != null) {
+            newsDiv.innerHTML = newsList.map(news => `
+                <div>
+                <h3><a href="${news.Link}">${news.Title}</a></h3>
+                    <p>(${news.Date})</p>
+                    <p>${news.Summary}</p>
+                </div>`).join('');
+          } else {
+            newsDiv.innerHTML = " <div></div>"
+          }
+        };
+    </script>
+
+</body>
+<style>
+    body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #d2e7ff;
+  }
+
+  h1 {
+  color: #5883cc;
+}
+
+  h3 {
+    color: #344e7c;
+  }
+  
+</style>
+</html>
+
+

@@ -13,3 +13,6 @@
 **3й семестр**
 - [Компьютерные сети](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Computer-networks)
 - [Низкоуровневое программирование](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Low-level-programming)
+
+**4й семестр**
+- [Алгоритмы компьютерной графики](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/%D0%A1omputer-graphics-algorithms)

@@ -16,3 +16,10 @@
 
 **4й семестр**
 - [Алгоритмы компьютерной графики](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/%D0%A1omputer-graphics-algorithms)
+
+**5й семестр**
+- [Базы данных](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Databases)
+- [Теория формальных языков](https://github.com/sofia-grigoreva/TFL)
+- [Разработка параллельных и распределенных программ](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Development-of-parallel-and-distributed-programs)
+
+

@@ -1,0 +1,9 @@
+ident 55959==4646
+!! comment1
+update a where != 5 updater
+!! comment2 !
+ more comments
+!!f
+notcomment
+!!
+notcomment

@@ -1,0 +1,103 @@
+* Полнострочный комментарий
+
+define int array MakeRange(int n)
+int array a := new int[n];
+int i := 0 to n - 1 do
+  a[i] := i ** 2
+end;
+return a
+end
+
+define Log(char array text)
+assert text <> NULL
+end
+
+define int Main(char array array args)
+int x := {16}1F, y := 2, z;
+char nl := #LF, quote := '''', letter := 'A';
+char array msg := "We say " $QUOT "Hello" $QUOT $LF;
+bool ok := T xor F;
+int array a := MakeRange(5);
+z := a[1] + x mod y; *** хвостовой комментарий
+Log(msg);
+if x > y then
+  z := z + 1
+elsif x = y then
+  z := 0
+else
+  z := z - 1
+end;
+while z > 0 do
+  z := z - 1
+end;
+int i := 0 to 4 step 1 do
+  a[i] := a[i] + i
+end;
+char ch := 'A' to 'C' do
+  letter := ch
+end;
+do
+  x := x - 1
+while x > 0;
+assert args <> NULL and ok = T;
+int abs := (x > 0) ? x : -x;
+int sign := (x < 0) ? -1 : (x > 0) ? 1 : 0;
+*** Тернарная операция имеет приоритет выше, чем у сравнений, ниже, чем у + и -
+*** Ассоциативность - правая
+int z := 1 > 2 + 5 ? 3 : 4 + 4;
+return 0
+end
+
+define int array SumVectors(int array A, int array B)
+    int size := Length(A);
+    assert size = Length(B);
+    int array C := new int[size];
+    int i := 0 to size - 1 do
+        C[i] := A[i] + B[i]
+    end;
+    return C
+end
+
+define int Main(char array array args)
+    *** какие-то действия
+    return 0
+end
+
+define int UseAllReserved(char array array Args)
+    int x := 10, y := 3, i := 0;
+    char c := 'A';
+    bool p := T, q := F, r := not F;
+    int array A := new int[10];
+    char array S := NULL;
+
+    assert (p and not q) or (p xor q);
+
+    if x mod y = 1 then
+        A[0] := x + y
+    elsif x < y then
+        A[0] := x - y
+    else
+        A[0] := x ** 2 / y
+    end;
+
+    while i < 3 do
+        A[i] := A[i] + 1;
+        i := i + 1
+    end;
+
+    int j := 0 to 5 step 2 do
+        A[j] := j
+    end;
+
+    do
+        x := x - 1
+    while x > 0;
+
+    if S = NULL then
+        S := "ok"
+    else
+        S := "bad"
+    end;
+
+    return A[0]
+end

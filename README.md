@@ -1,25 +1,35 @@
 # BMSTU_Programming
 
-Код, написанный в рамках обучения в  МГТУ им. Н. Э. Баумана на кафедре ИУ9 «Теоретическая информатика и компьютерные технологии» по специальности «Прикладная математика и информатика».
+Код, написанный в рамках обучения в МГТУ им. Н. Э. Баумана на кафедре ИУ9 «Теоретическая информатика и компьютерные технологии» по специальности «Прикладная математика и информатика».
 
 **1й семестр**
+
 - [Алгоритмы и структуры данных](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Algorithms-and-data-structures)
 - [Основы информатики](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Basics-of-computer-science)
 
 **2й семестр**
+
 - [Языки и методы программирования](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Programming-languages-and-methods)
 - [Дискретная математика](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Discrete-math)
 
 **3й семестр**
+
 - [Компьютерные сети](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Computer-networks)
 - [Низкоуровневое программирование](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Low-level-programming)
 
 **4й семестр**
+
 - [Алгоритмы компьютерной графики](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/%D0%A1omputer-graphics-algorithms)
 
 **5й семестр**
+
 - [Базы данных](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Databases)
 - [Теория формальных языков](https://github.com/sofia-grigoreva/TFL)
 - [Разработка параллельных и распределенных программ](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Development-of-parallel-and-distributed-programs)
 
+**6й семестр**
 
+- [Численные методы](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Numerical-methods)
+- [Конструирование компиляторов](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Designing-compilers)
+- [Генерация оптимального кода](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Generating-optimal-code)
+- [Объектно-функциональное программирование](https://github.com/sofia-grigoreva/BMSTU_Programming/tree/main/Object-functional-programming)

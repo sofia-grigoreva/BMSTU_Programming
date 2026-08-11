@@ -1,0 +1,17 @@
+function main() {
+    x = 10;
+    y = 20;
+
+    if (x < y) {
+        x = x + 10;
+    }
+
+    y = y + x;
+
+    while (x < 40) {
+        x = x + 1;
+        y = y + 1;
+    }
+
+    return x;
+}

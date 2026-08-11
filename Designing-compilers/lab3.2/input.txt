@@ -1,0 +1,1 @@
+(<int> [SumVectors (<int> !A) (<int> !B)] )(int #size) := [length !A] , \ #size _eq_ [length !B] , (<int> #C) := new_ <int> #size , (<int> #i : 0, #size - 1) <#C #i> := <!A #i> + <!B #i> % , ^ #C %%

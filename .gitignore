@@ -1,0 +1,155 @@
+# ============================================================
+# OS / System
+# ============================================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+
+# ============================================================
+# IDE / Editors
+# ============================================================
+.idea/
+.vscode/
+*.iml
+
+# ============================================================
+# Environment / Secrets
+# ============================================================
+.env
+.env.*
+!.env.example
+
+# ============================================================
+# Logs / Temporary files
+# ============================================================
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Testing / coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ============================================================
+# C / C++
+# ============================================================
+*.o
+*.obj
+*.lo
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Debug files
+*.dSYM/
+*.pdb
+*.ilk
+
+# CMake
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+
+# Autotools
+.deps/
+.libs/
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.log
+config.status
+
+# ============================================================
+# Scala / JVM / sbt
+# ============================================================
+target/
+project/target/
+project/project/
+
+.bsp/
+.bloop/
+.metals/
+.scala-build/
+
+# JVM
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+# ============================================================
+# Go
+# ============================================================
+# Compiled binaries
+*.test
+
+# Coverage / profiling
+*.cover
+*.prof
+coverage.out
+
+# Go workspace
+go.work
+go.work.sum
+
+# Vendor
+# Раскомментируйте, если vendor не хранится в Git:
+# vendor/
+
+# ============================================================
+# Build directories
+# ============================================================
+bin/
+obj/
+out/
+
+# ============================================================
+# Local configuration
+# ============================================================
+*.local
+.local/
+.cache/

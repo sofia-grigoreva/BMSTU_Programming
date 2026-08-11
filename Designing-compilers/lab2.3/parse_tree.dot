@@ -1,0 +1,362 @@
+digraph {
+  rankdir=TB;
+  node [shape=box];
+  n0 [label="Spec"];
+  n0 -> n1;
+  n1 [label="Terms"];
+  n1 -> n2;
+  n2 [label="("];
+  n1 -> n3;
+  n3 [label="terms"];
+  n1 -> n4;
+  n4 [label="TermList"];
+  n4 -> n5;
+  n5 [label="Term"];
+  n5 -> n6;
+  n6 [label="n"];
+  n4 -> n7;
+  n7 [label="TermList"];
+  n7 -> n8;
+  n8 [label="Term"];
+  n8 -> n9;
+  n9 [label="\\("];
+  n7 -> n10;
+  n10 [label="TermList"];
+  n10 -> n11;
+  n11 [label="Term"];
+  n11 -> n12;
+  n12 [label="\\)"];
+  n10 -> n13;
+  n13 [label="TermList"];
+  n13 -> n14;
+  n14 [label="Term"];
+  n14 -> n15;
+  n15 [label="*"];
+  n13 -> n16;
+  n16 [label="TermList"];
+  n16 -> n17;
+  n17 [label="Term"];
+  n17 -> n18;
+  n18 [label="+"];
+  n16 -> n19;
+  n19 [label="TermList"];
+  { rank=same; n17 -> n19 [style=invis]; }
+  { rank=same; n14 -> n16 [style=invis]; }
+  { rank=same; n11 -> n13 [style=invis]; }
+  { rank=same; n8 -> n10 [style=invis]; }
+  { rank=same; n5 -> n7 [style=invis]; }
+  n1 -> n20;
+  n20 [label=")"];
+  { rank=same; n2 -> n3 -> n4 -> n20 [style=invis]; }
+  n0 -> n21;
+  n21 [label="Rules"];
+  n21 -> n22;
+  n22 [label="Rule"];
+  n22 -> n23;
+  n23 [label="("];
+  n22 -> n24;
+  n24 [label="RuleHead"];
+  n24 -> n25;
+  n25 [label="F"];
+  n24 -> n26;
+  n26 [label=")"];
+  n24 -> n27;
+  n27 [label="="];
+  n24 -> n28;
+  n28 [label="Expr"];
+  n28 -> n29;
+  n29 [label="Alt"];
+  n29 -> n30;
+  n30 [label="SymbolList"];
+  n30 -> n31;
+  n31 [label="Symbol"];
+  n31 -> n32;
+  n32 [label="n"];
+  n30 -> n33;
+  n33 [label="SymbolList"];
+  { rank=same; n31 -> n33 [style=invis]; }
+  n28 -> n34;
+  n34 [label="ExprTail"];
+  n34 -> n35;
+  n35 [label="|"];
+  n34 -> n36;
+  n36 [label="Alt"];
+  n36 -> n37;
+  n37 [label="SymbolList"];
+  n37 -> n38;
+  n38 [label="Symbol"];
+  n38 -> n39;
+  n39 [label="\\("];
+  n37 -> n40;
+  n40 [label="SymbolList"];
+  n40 -> n41;
+  n41 [label="Symbol"];
+  n41 -> n42;
+  n42 [label="("];
+  n41 -> n43;
+  n43 [label="E"];
+  n41 -> n44;
+  n44 [label=")"];
+  { rank=same; n42 -> n43 -> n44 [style=invis]; }
+  n40 -> n45;
+  n45 [label="SymbolList"];
+  n45 -> n46;
+  n46 [label="Symbol"];
+  n46 -> n47;
+  n47 [label="\\)"];
+  n45 -> n48;
+  n48 [label="SymbolList"];
+  { rank=same; n46 -> n48 [style=invis]; }
+  { rank=same; n41 -> n45 [style=invis]; }
+  { rank=same; n38 -> n40 [style=invis]; }
+  n34 -> n49;
+  n49 [label="ExprTail"];
+  { rank=same; n35 -> n36 -> n49 [style=invis]; }
+  { rank=same; n29 -> n34 [style=invis]; }
+  n24 -> n50;
+  n50 [label="."];
+  { rank=same; n25 -> n26 -> n27 -> n28 -> n50 [style=invis]; }
+  { rank=same; n23 -> n24 [style=invis]; }
+  n21 -> n51;
+  n51 [label="Rules"];
+  n51 -> n52;
+  n52 [label="Rule"];
+  n52 -> n53;
+  n53 [label="("];
+  n52 -> n54;
+  n54 [label="RuleHead"];
+  n54 -> n55;
+  n55 [label="T"];
+  n54 -> n56;
+  n56 [label=")"];
+  n54 -> n57;
+  n57 [label="="];
+  n54 -> n58;
+  n58 [label="Expr"];
+  n58 -> n59;
+  n59 [label="Alt"];
+  n59 -> n60;
+  n60 [label="SymbolList"];
+  n60 -> n61;
+  n61 [label="Symbol"];
+  n61 -> n62;
+  n62 [label="("];
+  n61 -> n63;
+  n63 [label="F"];
+  n61 -> n64;
+  n64 [label=")"];
+  { rank=same; n62 -> n63 -> n64 [style=invis]; }
+  n60 -> n65;
+  n65 [label="SymbolList"];
+  n65 -> n66;
+  n66 [label="Symbol"];
+  n66 -> n67;
+  n67 [label="("];
+  n66 -> n68;
+  n68 [label="T1"];
+  n66 -> n69;
+  n69 [label=")"];
+  { rank=same; n67 -> n68 -> n69 [style=invis]; }
+  n65 -> n70;
+  n70 [label="SymbolList"];
+  { rank=same; n66 -> n70 [style=invis]; }
+  { rank=same; n61 -> n65 [style=invis]; }
+  n58 -> n71;
+  n71 [label="ExprTail"];
+  { rank=same; n59 -> n71 [style=invis]; }
+  n54 -> n72;
+  n72 [label="."];
+  { rank=same; n55 -> n56 -> n57 -> n58 -> n72 [style=invis]; }
+  { rank=same; n53 -> n54 [style=invis]; }
+  n51 -> n73;
+  n73 [label="Rules"];
+  n73 -> n74;
+  n74 [label="Rule"];
+  n74 -> n75;
+  n75 [label="("];
+  n74 -> n76;
+  n76 [label="RuleHead"];
+  n76 -> n77;
+  n77 [label="T1"];
+  n76 -> n78;
+  n78 [label=")"];
+  n76 -> n79;
+  n79 [label="="];
+  n76 -> n80;
+  n80 [label="Expr"];
+  n80 -> n81;
+  n81 [label="Alt"];
+  n81 -> n82;
+  n82 [label="SymbolList"];
+  n82 -> n83;
+  n83 [label="Symbol"];
+  n83 -> n84;
+  n84 [label="*"];
+  n82 -> n85;
+  n85 [label="SymbolList"];
+  n85 -> n86;
+  n86 [label="Symbol"];
+  n86 -> n87;
+  n87 [label="("];
+  n86 -> n88;
+  n88 [label="F"];
+  n86 -> n89;
+  n89 [label=")"];
+  { rank=same; n87 -> n88 -> n89 [style=invis]; }
+  n85 -> n90;
+  n90 [label="SymbolList"];
+  n90 -> n91;
+  n91 [label="Symbol"];
+  n91 -> n92;
+  n92 [label="("];
+  n91 -> n93;
+  n93 [label="T1"];
+  n91 -> n94;
+  n94 [label=")"];
+  { rank=same; n92 -> n93 -> n94 [style=invis]; }
+  n90 -> n95;
+  n95 [label="SymbolList"];
+  { rank=same; n91 -> n95 [style=invis]; }
+  { rank=same; n86 -> n90 [style=invis]; }
+  { rank=same; n83 -> n85 [style=invis]; }
+  n80 -> n96;
+  n96 [label="ExprTail"];
+  n96 -> n97;
+  n97 [label="|"];
+  n96 -> n98;
+  n98 [label="Alt"];
+  n96 -> n99;
+  n99 [label="ExprTail"];
+  { rank=same; n97 -> n98 -> n99 [style=invis]; }
+  { rank=same; n81 -> n96 [style=invis]; }
+  n76 -> n100;
+  n100 [label="."];
+  { rank=same; n77 -> n78 -> n79 -> n80 -> n100 [style=invis]; }
+  { rank=same; n75 -> n76 [style=invis]; }
+  n73 -> n101;
+  n101 [label="Rules"];
+  n101 -> n102;
+  n102 [label="Rule"];
+  n102 -> n103;
+  n103 [label="("];
+  n102 -> n104;
+  n104 [label="RuleHead"];
+  n104 -> n105;
+  n105 [label="axiom"];
+  n104 -> n106;
+  n106 [label="E"];
+  n104 -> n107;
+  n107 [label=")"];
+  n104 -> n108;
+  n108 [label="="];
+  n104 -> n109;
+  n109 [label="Expr"];
+  n109 -> n110;
+  n110 [label="Alt"];
+  n110 -> n111;
+  n111 [label="SymbolList"];
+  n111 -> n112;
+  n112 [label="Symbol"];
+  n112 -> n113;
+  n113 [label="("];
+  n112 -> n114;
+  n114 [label="T"];
+  n112 -> n115;
+  n115 [label=")"];
+  { rank=same; n113 -> n114 -> n115 [style=invis]; }
+  n111 -> n116;
+  n116 [label="SymbolList"];
+  n116 -> n117;
+  n117 [label="Symbol"];
+  n117 -> n118;
+  n118 [label="("];
+  n117 -> n119;
+  n119 [label="E1"];
+  n117 -> n120;
+  n120 [label=")"];
+  { rank=same; n118 -> n119 -> n120 [style=invis]; }
+  n116 -> n121;
+  n121 [label="SymbolList"];
+  { rank=same; n117 -> n121 [style=invis]; }
+  { rank=same; n112 -> n116 [style=invis]; }
+  n109 -> n122;
+  n122 [label="ExprTail"];
+  { rank=same; n110 -> n122 [style=invis]; }
+  n104 -> n123;
+  n123 [label="."];
+  { rank=same; n105 -> n106 -> n107 -> n108 -> n109 -> n123 [style=invis]; }
+  { rank=same; n103 -> n104 [style=invis]; }
+  n101 -> n124;
+  n124 [label="Rules"];
+  n124 -> n125;
+  n125 [label="Rule"];
+  n125 -> n126;
+  n126 [label="("];
+  n125 -> n127;
+  n127 [label="RuleHead"];
+  n127 -> n128;
+  n128 [label="E1"];
+  n127 -> n129;
+  n129 [label=")"];
+  n127 -> n130;
+  n130 [label="="];
+  n127 -> n131;
+  n131 [label="Expr"];
+  n131 -> n132;
+  n132 [label="Alt"];
+  n132 -> n133;
+  n133 [label="SymbolList"];
+  n133 -> n134;
+  n134 [label="Symbol"];
+  n134 -> n135;
+  n135 [label="+"];
+  n133 -> n136;
+  n136 [label="SymbolList"];
+  n136 -> n137;
+  n137 [label="Symbol"];
+  n137 -> n138;
+  n138 [label="("];
+  n137 -> n139;
+  n139 [label="T"];
+  n137 -> n140;
+  n140 [label=")"];
+  { rank=same; n138 -> n139 -> n140 [style=invis]; }
+  n136 -> n141;
+  n141 [label="SymbolList"];
+  n141 -> n142;
+  n142 [label="Symbol"];
+  n142 -> n143;
+  n143 [label="("];
+  n142 -> n144;
+  n144 [label="E1"];
+  n142 -> n145;
+  n145 [label=")"];
+  { rank=same; n143 -> n144 -> n145 [style=invis]; }
+  n141 -> n146;
+  n146 [label="SymbolList"];
+  { rank=same; n142 -> n146 [style=invis]; }
+  { rank=same; n137 -> n141 [style=invis]; }
+  { rank=same; n134 -> n136 [style=invis]; }
+  n131 -> n147;
+  n147 [label="ExprTail"];
+  n147 -> n148;
+  n148 [label="|"];
+  n147 -> n149;
+  n149 [label="Alt"];
+  n147 -> n150;
+  n150 [label="ExprTail"];
+  { rank=same; n148 -> n149 -> n150 [style=invis]; }
+  { rank=same; n132 -> n147 [style=invis]; }
+  n127 -> n151;
+  n151 [label="."];
+  { rank=same; n128 -> n129 -> n130 -> n131 -> n151 [style=invis]; }
+  { rank=same; n126 -> n127 [style=invis]; }
+  n124 -> n152;
+  n152 [label="Rules"];
+  { rank=same; n125 -> n152 [style=invis]; }
+  { rank=same; n102 -> n124 [style=invis]; }
+  { rank=same; n74 -> n101 [style=invis]; }
+  { rank=same; n52 -> n73 [style=invis]; }
+  { rank=same; n22 -> n51 [style=invis]; }
+  { rank=same; n1 -> n21 [style=invis]; }
+}

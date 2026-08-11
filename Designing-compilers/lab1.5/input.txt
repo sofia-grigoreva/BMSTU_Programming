@@ -1,0 +1,4 @@
+111 "\"hello\tfriend\n" @"multi
+line ""string""" 0
+
+"one line\13\10secondline\049\048\48\53\48\48!\7"

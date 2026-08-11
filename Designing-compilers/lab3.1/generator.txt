@@ -1,0 +1,14 @@
+; Аксиома заключена в фигурные скобки.
+{ S }, D, L, I, R, P, A, B, C, M, N, Y
+< S : D R >
+< D : I L >
+< I : "NONTERM" : "LBRACE" "NONTERM" "RBRACE" >
+< L : "COMMA" I L : @ >
+< R : P R : @ >
+< P : "LANGLE" "NONTERM" "COLON" A "RANGLE" >
+< A : C B >
+< B : "COLON" C B : @ >
+< C : "EPS" : M >
+< M : Y N >
+< N : Y N : @ >
+< Y : "NONTERM" : "TERM" >
